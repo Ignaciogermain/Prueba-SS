@@ -1,0 +1,28 @@
+table EndDate
+	lineageTag: 26c22ec0-6d41-4136-9b0f-424ceabbab3c
+
+	column EndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 959fcdd9-dd36-457a-93fc-455482bff2fc
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variación
+			isDefault
+			relationship: 986fc621-f7c6-409c-952a-f8ec6196e270
+			defaultHierarchy: LocalDateTable_f797e620-8985-4d9c-abaa-392f4a61252b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition EndDate = m
+		mode: import
+		queryGroup: Calendar
+		source = #date(2026, 12, 30) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Date
+

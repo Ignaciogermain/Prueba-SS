@@ -1,0 +1,39 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Calendar
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Clientes","Peliculas","Datos","Tabla Dólar","Medidas","StartDate","EndDate","Calendar","LastRefresh"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Clientes
+ref table Peliculas
+ref table Datos
+ref table DateTableTemplate_de1fa0b7-663d-47a5-a65e-a35dae3743df
+ref table LocalDateTable_aab5d653-2040-47e2-82df-a7266a146f91
+ref table 'Tabla Dólar'
+ref table LocalDateTable_5ecf25fa-f594-4ba3-8f82-e60220070282
+ref table Medidas
+ref table StartDate
+ref table LocalDateTable_387c151d-ac3b-4d5a-8537-3c6bfd0e0f91
+ref table EndDate
+ref table LocalDateTable_f797e620-8985-4d9c-abaa-392f4a61252b
+ref table Calendar
+ref table LocalDateTable_13400e41-3b31-4f44-a624-090436c02019
+ref table LastRefresh
+ref table LocalDateTable_a2d9b47d-314b-4cfd-9eb5-2785cadb474a
+
+ref role GENERO_NORMAL
+
+ref cultureInfo es-MX
+

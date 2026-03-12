@@ -1,0 +1,28 @@
+table StartDate
+	lineageTag: 8dbcac58-9713-4801-adf1-b573afdf8b0c
+
+	column StartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 538d927d-d6e6-4e60-bd46-2598a303196a
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variación
+			isDefault
+			relationship: 362184bb-a12a-4f1a-a110-0e0957ccfae9
+			defaultHierarchy: LocalDateTable_387c151d-ac3b-4d5a-8537-3c6bfd0e0f91.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition StartDate = m
+		mode: import
+		queryGroup: Calendar
+		source = #date(2020, 1, 1) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Date
+

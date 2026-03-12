@@ -1,0 +1,43 @@
+relationship 0a83d16d-a755-47d3-b42d-66a02f63e834
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Datos.Fecha_Devolución
+	toColumn: LocalDateTable_aab5d653-2040-47e2-82df-a7266a146f91.Date
+
+relationship AutoDetected_2f78c840-9981-4080-a7a3-3c0453178e9e
+	fromColumn: Datos.RUT
+	toColumn: Clientes.RUT
+
+relationship AutoDetected_03b6c72f-b417-454b-a387-87d628051133
+	fromColumn: Datos.Id_Pelicula
+	toColumn: Peliculas.Id_Pelicula
+
+relationship 0a04150f-9f57-4bd7-a7d2-44c49f97bece
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Dólar'.Fecha
+	toColumn: LocalDateTable_5ecf25fa-f594-4ba3-8f82-e60220070282.Date
+
+relationship 362184bb-a12a-4f1a-a110-0e0957ccfae9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StartDate.StartDate
+	toColumn: LocalDateTable_387c151d-ac3b-4d5a-8537-3c6bfd0e0f91.Date
+
+relationship 986fc621-f7c6-409c-952a-f8ec6196e270
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EndDate.EndDate
+	toColumn: LocalDateTable_f797e620-8985-4d9c-abaa-392f4a61252b.Date
+
+relationship 05dd31e9-934c-4d4e-8a5b-90aa5613ca66
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendar.Date
+	toColumn: LocalDateTable_13400e41-3b31-4f44-a624-090436c02019.Date
+
+relationship 7bdbf67b-e373-684a-36c1-f9b578f3b978
+	crossFilteringBehavior: bothDirections
+	fromColumn: Datos.Fecha_Arriendo
+	toColumn: Calendar.Date
+
+relationship 71097eac-259e-4b47-95a6-f55cc96e2902
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LastRefresh.Column1
+	toColumn: LocalDateTable_a2d9b47d-314b-4cfd-9eb5-2785cadb474a.Date
+

@@ -1,0 +1,35 @@
+table LastRefresh
+	lineageTag: 029438af-147d-422c-a345-f578444aa0ed
+
+	column Column1
+		dataType: dateTime
+		formatString: d "de" mmmm
+		lineageTag: a7e6afbf-00da-4bfb-b6d1-d550d1051c8c
+		summarizeBy: none
+		sourceColumn: Column1
+
+		variation Variación
+			isDefault
+			relationship: 71097eac-259e-4b47-95a6-f55cc96e2902
+			defaultHierarchy: LocalDateTable_a2d9b47d-314b-4cfd-9eb5-2785cadb474a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition LastRefresh = m
+		mode: import
+		source =
+				let
+				    Source = DateTime.LocalNow(),
+				    #"Convertida en tabla" = #table(1, {{Source}}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Convertida en tabla",{{"Column1", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
