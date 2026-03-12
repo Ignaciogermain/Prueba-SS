@@ -1,8 +1,3 @@
-relationship 0a83d16d-a755-47d3-b42d-66a02f63e834
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Datos.Fecha_Devolución
-	toColumn: LocalDateTable_aab5d653-2040-47e2-82df-a7266a146f91.Date
-
 relationship AutoDetected_2f78c840-9981-4080-a7a3-3c0453178e9e
 	fromColumn: Datos.RUT
 	toColumn: Clientes.RUT
@@ -40,4 +35,10 @@ relationship 71097eac-259e-4b47-95a6-f55cc96e2902
 	joinOnDateBehavior: datePartOnly
 	fromColumn: LastRefresh.Column1
 	toColumn: LocalDateTable_a2d9b47d-314b-4cfd-9eb5-2785cadb474a.Date
+
+relationship c1e3da8a-8bfe-7a59-c594-c54d3c78b183
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: Datos.Fecha_Devolución
+	toColumn: Calendar.Date
 

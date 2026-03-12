@@ -188,11 +188,6 @@ table Datos
 		summarizeBy: none
 		sourceColumn: Fecha_Devolución
 
-		variation Variación
-			isDefault
-			relationship: 0a83d16d-a755-47d3-b42d-66a02f63e834
-			defaultHierarchy: LocalDateTable_aab5d653-2040-47e2-82df-a7266a146f91.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
